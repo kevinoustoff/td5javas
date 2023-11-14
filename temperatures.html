@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Mesures de Températures</title>
+  <link rel="stylesheet" href="button.css">
+
+  <style>
+  table {
+    border-collapse: collapse;
+    empty-cells: hide;
+    border: none;
+  }
+  td,th {
+    border: 1px solid black;
+	  padding: 5px;
+	  width: 2.5em;
+	  text-align: center;
+  }
+  caption {
+    padding: 5px;
+	  font-weight: bold;
+	  font-size: 125%;
+  }
+  dt {
+    font-style: oblique;
+  }
+  </style>
+</head>
+<body>
+<div id="main">
+  <nav id="menu">
+    <ul class="menu horiz">
+    <li><label class="button">Sélectionner un fichier <input type="file" id="fichier-temperatures" accept="application/json"></label></li>
+    <li><button id="charger" class="button">Charger</button></li>
+    <li><button id="diagramme" class="button">Diagramme</a></li>
+    </ul>
+  </nav>
+  <section>
+    <h1>Mesures de Températures</h1>
+    <div id="tableau-temperatures">
+      Pas de températures chargées
+    </div>
+    <div class="diagramme-temperatures">
+    <p>
+      <canvas id="canvas-temperatures"  width="600" height="450" aria-label="Températures" role="img">
+      </canvas>
+    </p>
+    </div>
+  </section>
+</div>
+<script type="module" src="temperatures.js"></script>
+</body>
+</html>
